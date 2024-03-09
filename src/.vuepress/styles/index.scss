@@ -1,13 +1,30 @@
 // 样式配置：https://theme-hope.vuejs.press/zh/config/style.html
 
 .vp-blogger-name {
-  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
-  background-clip: text;
+  background-image: -webkit-linear-gradient(left, #5c92d1, #ff6a00 50%, #3eaf7c);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: hue 5s infinite linear;
+  text-shadow: 2px 2px 2px transparent;
 }
 
 .vp-blogger-description {
-  background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-  background-clip: text;
+  background-image: -webkit-linear-gradient(left, #3eaf7c, #5c92d1 50%, #ff6a00);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: hue 5s infinite linear;
+  text-shadow: 2px 2px 2px transparent;
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    -moz-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+    -moz-filter: hue-rotate(-360deg);
+  }
 }
