@@ -4,7 +4,7 @@ import { java, python, javascript, typescript } from './language/index.js';
 import { mysql, redis, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { spring, springboot, springcloud, mybatis, mybatisplus } from './back-end/index.js';
-import { vue } from './website/index.js';
+import { vue, weixin } from './website/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
 
@@ -32,7 +32,7 @@ const notes = arraySidebar([
     text: "前端框架",
     icon: "HTML",
     collapsible: false,
-    children: ["vue/"]
+    children: ["vue/", "weixin/"]
   },
   {
     text: "后端框架",
@@ -65,6 +65,7 @@ export const notesSidebar = {
   "/notes/my-batis/": mybatis,
   "/notes/my-batis-plus/": mybatisplus,
   "/notes/vue/": vue,
+  "/notes/weixin/": weixin,
   "/notes/linux/": linux,
 
   "/notes/": notes,

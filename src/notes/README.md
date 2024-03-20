@@ -37,6 +37,7 @@ sticky: 5
 ### 前端框架
 
 - [Vue.js](/notes/vue/README.md)
+- [微信小程序](/notes/weixin/README.md)
 
 ### 后端框架
 

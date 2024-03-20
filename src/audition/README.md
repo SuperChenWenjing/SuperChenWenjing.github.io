@@ -39,6 +39,7 @@ sticky: 4
 ### 前端框架
 
 - [Vue.js](/audition/vue/README.md)
+- [微信小程序](/audition/weixin/README.md)
 
 ### 后端框架
 
