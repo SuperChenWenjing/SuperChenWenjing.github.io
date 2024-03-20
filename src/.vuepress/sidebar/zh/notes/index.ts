@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-import { java, javascript, typescript } from './language/index.js';
+import { java, python, javascript, typescript } from './language/index.js';
 import { mysql, redis, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { spring, springboot, springcloud, mybatis, mybatisplus } from './back-end/index.js';
@@ -14,7 +14,7 @@ const notes = arraySidebar([
     text: "语言",
     icon: "houtaiguanli",
     collapsible: false,
-    children: ["java/", "javascript/", "typescript/"]
+    children: ["java/", "python/", "javascript/", "typescript/"]
   },
   {
     text: "数据库",
@@ -53,6 +53,7 @@ export const notesSidebar = {
   "/notes/kubernetes/": kubernetes,
   "/notes/elasticsearch/": elasticsearch,
   "/notes/java/": java,
+  "/notes/python/": python,
   "/notes/javascript/": javascript,
   "/notes/typescript/": typescript,
   "/notes/spring/": spring,

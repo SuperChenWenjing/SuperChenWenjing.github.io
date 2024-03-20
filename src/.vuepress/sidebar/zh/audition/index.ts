@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-import { java, javascript, typescript } from './language/index.js';
+import { java, python, javascript, typescript } from './language/index.js';
 import { redis, mysql, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { vue } from './website/index.js';
@@ -14,7 +14,7 @@ const audition = arraySidebar([
     text: "语言",
     icon: "houtaiguanli",
     collapsible: false,
-    children: ["java/", "javascript/", "typescript/"]
+    children: ["java/", "python/", "javascript/", "typescript/"]
   },
   {
     text: "数据库",
@@ -50,6 +50,7 @@ const audition = arraySidebar([
 
 export const auditionSidebar = {
   "/audition/java/": java,
+  "/audition/python/": python,
   "/audition/javascript/": javascript,
   "/audition/typescript/": typescript,
   "/audition/redis/": redis,

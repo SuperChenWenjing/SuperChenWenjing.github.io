@@ -22,6 +22,7 @@ sticky: 4
 ### 语言
 
 - [Java](/audition/java/README.md)
+- [Python](/audition/python/README.md)
 - [JavaScript](/audition/javascript/README.md)
 - [TypeScript](/audition/typescript/README.md)
 

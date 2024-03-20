@@ -37,7 +37,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "语言",
-        children: ["/notes/java/", "/notes/javascript/", "/notes/typescript/"],
+        children: ["/notes/java/", "/notes/python/", "/notes/javascript/", "/notes/typescript/"],
       },
       {
         text: "数据库",
@@ -74,7 +74,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "语言",
-        children: ["/audition/java/", "/audition/javascript/", "/audition/typescript/"],
+        children: ["/audition/java/", "/audition/python/", "/audition/javascript/", "/audition/typescript/"],
       },
       {
         text: "数据库",

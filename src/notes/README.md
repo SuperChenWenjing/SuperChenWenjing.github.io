@@ -20,6 +20,7 @@ sticky: 5
 ### 语言
 
 - [Java](/notes/java/README.md)
+- [Python](/notes/python/README.md)
 - [JavaScript](/notes/javascript/README.md)
 - [TypeScript](/notes/typescript/README.md)
 
