@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 import { java, python, javascript, typescript } from './language/index.js';
 import { redis, mysql, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
-import { vue, weixin } from './website/index.js';
+import { vue, wechat } from './website/index.js';
 import { spring, springboot, springcloud, mybatis, mybatisplus } from './back-end/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
@@ -32,7 +32,7 @@ const audition = arraySidebar([
     text: "前端框架",
     icon: "HTML",
     collapsible: false,
-    children: ["vue/", "weixin/"]
+    children: ["vue/", "wechat/"]
   },
   {
     text: "后端框架",
@@ -58,7 +58,7 @@ export const auditionSidebar = {
   "/audition/mongodb/": mongodb,
   "/audition/elasticsearch/": elasticsearch,
   "/audition/vue/": vue,
-  "/audition/weixin/": weixin,
+  "/audition/wechat/": wechat,
   "/audition/spring/": spring,
   "/audition/spring-boot/": springboot,
   "/audition/spring-cloud/": springcloud,

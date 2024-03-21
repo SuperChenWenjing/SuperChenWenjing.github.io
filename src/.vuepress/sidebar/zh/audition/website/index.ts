@@ -1,2 +1,2 @@
 export * from './vue.js';
-export * from './weixin.js';
+export * from './wechat.js';

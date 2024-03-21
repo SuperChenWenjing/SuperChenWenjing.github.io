@@ -1,5 +1,5 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const weixin = arraySidebar([
+export const wechat = arraySidebar([
   "",
 ]);

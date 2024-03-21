@@ -49,7 +49,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "前端框架",
-        children: ["/notes/vue/", "/notes/weixin/"],
+        children: ["/notes/vue/", "/notes/wechat/"],
       },
       {
         text: "后端框架",
@@ -86,7 +86,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "前端框架",
-        children: ["/audition/vue/", "/audition/weixin/"],
+        children: ["/audition/vue/", "/audition/wechat/"],
       },
       {
         text: "后端框架",
