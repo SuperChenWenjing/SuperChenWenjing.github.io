@@ -1,8 +1,8 @@
 ---
-title: 微信小程序
+title: 小程序
 icon: a-weixinxiaochengxu11
 # date: 2019-11-15
-category: 微信小程序
+category: 小程序
 star: true
 ---
 
