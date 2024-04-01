@@ -53,7 +53,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "后端框架",
-        children: ["/notes/spring/", "/notes/spring-boot/", "/notes/spring-cloud/", "/notes/my-batis/", "/notes/my-batis-plus/"],
+        children: ["/notes/spring/", "/notes/spring-boot/", "/notes/spring-cloud/", "/notes/my-batis/", "/notes/my-batis-plus/", "django/"],
       },
       {
         text: "后端运维",
@@ -90,7 +90,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "后端框架",
-        children: ["/audition/spring/", "/audition/spring-boot/", "/audition/spring-cloud/", "/audition/my-batis/", "/audition/my-batis-plus/"],
+        children: ["/audition/spring/", "/audition/spring-boot/", "/audition/spring-cloud/", "/audition/my-batis/", "/audition/my-batis-plus/", "django/"],
       },
       {
         text: "后端运维",

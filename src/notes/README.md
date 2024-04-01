@@ -46,6 +46,7 @@ sticky: 5
 - [SpringCloud](/notes/spring-cloud/README.md)
 - [MyBatis](/notes/my-batis/README.md)
 - [MyBatisPlus](/notes/my-batis-plus/README.md)
+- [Django](/notes/django/README.md)
 
 ### 后端运维
 
