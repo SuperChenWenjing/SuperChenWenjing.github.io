@@ -8,6 +8,6 @@ timeline: true
 star: true
 ---
 
-此处是一些 Python 基础的高频面试题（持续更新中...）。
+此处是一些 Django 基础的高频面试题（持续更新中...）。
 
 <!-- more -->

@@ -16,4 +16,4 @@ star: true
 
 ### 基础
 
-- [基础](/audition/python/core/README.md)
+- [基础知识](/audition/python/core/README.md)

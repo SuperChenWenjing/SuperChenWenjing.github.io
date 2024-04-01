@@ -14,3 +14,9 @@ star: true
 :::
 
 <!-- more -->
+
+## 目录
+
+### Django
+
+- [基础知识](/notes/django/core/README.md)
