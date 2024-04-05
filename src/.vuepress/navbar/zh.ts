@@ -16,11 +16,11 @@ export const zhNavbar = navbar([
       },
       {
         text: "产品设计",
-        children: ["/casual/design/"],
+        children: ["design/"],
       },
       {
         text: "后端运维",
-        children: ["/casual/linux/"],
+        children: ["linux/"],
       },
     ],
   },
@@ -37,27 +37,27 @@ export const zhNavbar = navbar([
       },
       {
         text: "语言",
-        children: ["/notes/java/", "/notes/python/", "/notes/javascript/", "/notes/typescript/"],
+        children: ["java/", "python/", "javascript/", "typescript/"],
       },
       {
         text: "数据库",
-        children: ["/notes/redis/", "/notes/mysql/", "/notes/mongodb/"],
+        children: ["redis/", "mysql/", "mongodb/"],
       },
       {
         text: "搜索引擎",
-        children: ["/notes/elasticsearch/"],
+        children: ["elasticsearch/"],
       },
       {
         text: "前端框架",
-        children: ["/notes/vue/", "/notes/wechat/"],
+        children: ["vue/", "wechat/"],
       },
       {
         text: "后端框架",
-        children: ["/notes/spring/", "/notes/spring-boot/", "/notes/spring-cloud/", "/notes/my-batis/", "/notes/my-batis-plus/", "django/"],
+        children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"],
       },
       {
         text: "后端运维",
-        children: ["/notes/linux/", "/notes/docker/", "/notes/kubernetes/"],
+        children: ["linux/", "docker/", "kubernetes/"],
       },
     ],
   },
@@ -74,27 +74,27 @@ export const zhNavbar = navbar([
       },
       {
         text: "语言",
-        children: ["/audition/java/", "/audition/python/", "/audition/javascript/", "/audition/typescript/"],
+        children: ["java/", "python/", "javascript/", "typescript/"],
       },
       {
         text: "数据库",
-        children: ["/audition/redis/", "/audition/mysql/", "/audition/mongodb/"],
+        children: ["redis/", "mysql/", "mongodb/"],
       },
       {
         text: "搜索引擎",
-        children: ["/audition/elasticsearch/"],
+        children: ["elasticsearch/"],
       },
       {
         text: "前端框架",
-        children: ["/audition/vue/", "/audition/wechat/"],
+        children: ["vue/", "wechat/"],
       },
       {
         text: "后端框架",
-        children: ["/audition/spring/", "/audition/spring-boot/", "/audition/spring-cloud/", "/audition/my-batis/", "/audition/my-batis-plus/", "django/"],
+        children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"],
       },
       {
         text: "后端运维",
-        children: ["/audition/linux/", "/audition/docker/", "/audition/kubernetes/"],
+        children: ["linux/", "docker/", "kubernetes/"],
       },
     ]
   },

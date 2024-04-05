@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 import { java, python, javascript, typescript } from './language/index.js';
 import { mysql, redis, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
-import { spring, springboot, springcloud, mybatis, mybatisplus, django } from './back-end/index.js';
+import { spring, springboot, springcloud, mybatis, mybatisplus, flask, django } from './back-end/index.js';
 import { vue, wechat } from './website/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
@@ -38,7 +38,7 @@ const notes = arraySidebar([
     text: "后端框架",
     icon: "api",
     collapsible: false,
-    children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "django/"]
+    children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"]
   },
   {
     text: "后端运维",
@@ -64,6 +64,7 @@ export const notesSidebar = {
   "/notes/mongodb/": mongodb,
   "/notes/my-batis/": mybatis,
   "/notes/my-batis-plus/": mybatisplus,
+  "/notes/flask/": flask,
   "/notes/django/": django,
   "/notes/vue/": vue,
   "/notes/wechat/": wechat,

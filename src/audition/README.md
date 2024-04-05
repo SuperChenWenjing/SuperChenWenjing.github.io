@@ -48,6 +48,7 @@ sticky: 4
 - [SpringCloud](/audition/spring-cloud/README.md)
 - [MyBatis](/audition/my-batis/README.md)
 - [MyBatisPlus](/audition/my-batis-plus/README.md)
+- [Flask](/audition/flask/README.md)
 - [Django](/audition/django/README.md)
 
 ### 后端运维

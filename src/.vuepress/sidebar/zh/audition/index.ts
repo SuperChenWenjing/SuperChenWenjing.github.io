@@ -4,7 +4,7 @@ import { java, python, javascript, typescript } from './language/index.js';
 import { redis, mysql, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { vue, wechat } from './website/index.js';
-import { spring, springboot, springcloud, mybatis, mybatisplus, django } from './back-end/index.js';
+import { spring, springboot, springcloud, mybatis, mybatisplus, flask, django } from './back-end/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
 
@@ -38,7 +38,7 @@ const audition = arraySidebar([
     text: "后端框架",
     icon: "api",
     collapsible: false,
-    children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "django/"]
+    children: ["spring/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"]
   },
   {
     text: "后端运维",
@@ -64,6 +64,7 @@ export const auditionSidebar = {
   "/audition/spring-cloud/": springcloud,
   "/audition/my-batis/": mybatis,
   "/audition/my-batis-plus/": mybatisplus,
+  "/audition/flask/": flask,
   "/audition/django/": django,
   "/audition/linux/": linux,
   "/audition/docker/": docker,

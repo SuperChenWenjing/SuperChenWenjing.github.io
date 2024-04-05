@@ -1,6 +1,6 @@
 ---
 title: Django
-icon: Python
+icon: django
 # date: 2019-12-26
 category: Django
 timeline: true
