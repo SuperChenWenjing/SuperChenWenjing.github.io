@@ -4,6 +4,7 @@ import { java, python, javascript, typescript } from './language/index.js';
 import { redis, mysql, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { vue, react, wechat, uniapp } from './website/index.js';
+import { ios, android, harmonyos } from './mobile/index.js';
 import { vite, webpack } from './package/index.js';
 import { spring, springmvc, springboot, springcloud, mybatis, mybatisplus, flask, django } from './frameworks/index.js';
 import { linux } from './linux/index.js';
@@ -42,6 +43,12 @@ const audition = arraySidebar([
     children: ["vite/", "webpack/"]
   },
   {
+    text: "移动开发",
+    icon: "mobile",
+    collapsible: false,
+    children: ["ios/", "android/", "harmonyos/"]
+  },
+  {
     text: "后端框架",
     icon: "api",
     collapsible: false,
@@ -70,6 +77,9 @@ export const auditionSidebar = {
   "/audition/uni-app/": uniapp,
   "/audition/vite/": vite,
   "/audition/webpack/": webpack,
+  "/audition/ios/": ios,
+  "/audition/android/": android,
+  "/audition/harmonyos/": harmonyos,
   "/audition/spring/": spring,
   "/audition/spring-mvc/": springmvc,
   "/audition/spring-boot/": springboot,

@@ -56,6 +56,10 @@ export const zhNavbar = navbar([
         children: ["vite/", "webpack/"],
       },
       {
+        text: "移动开发",
+        children: ["ios/", "android/", 'harmonyos/'],
+      },
+      {
         text: "后端框架",
         children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"],
       },
@@ -95,6 +99,10 @@ export const zhNavbar = navbar([
       {
         text: "打包工具",
         children: ["vite/", "webpack/"],
+      },
+      {
+        text: "移动开发",
+        children: ["ios/", "android/", 'harmonyos/'],
       },
       {
         text: "后端框架",

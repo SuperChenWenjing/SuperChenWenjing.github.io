@@ -4,7 +4,7 @@ icon: React
 # date: 2019-11-15
 category:
   - React
-  - 前段框架
+  - 前端框架
 star: true
 ---
 

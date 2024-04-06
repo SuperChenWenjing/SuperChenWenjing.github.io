@@ -5,6 +5,7 @@ import { mysql, redis, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { spring, springmvc, springboot, springcloud, mybatis, mybatisplus, flask, django } from './frameworks/index.js';
 import { vue, react, wechat, uniapp } from './website/index.js';
+import { ios, android, harmonyos } from './mobile/index.js';
 import { vite, webpack } from './package/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
@@ -40,6 +41,12 @@ const notes = arraySidebar([
     icon: "SERVICESPACKAGES",
     collapsible: false,
     children: ["vite/", "webpack/"]
+  },
+  {
+    text: "移动开发",
+    icon: "mobile",
+    collapsible: false,
+    children: ["ios/", "android/", "harmonyos/"]
   },
   {
     text: "后端框架",
@@ -80,6 +87,9 @@ export const notesSidebar = {
   "/notes/uni-app/": uniapp,
   "/notes/vite/": vite,
   "/notes/webpack/": webpack,
+  "/notes/ios/": ios,
+  "/notes/android/": android,
+  "/notes/harmonyos/": harmonyos,
   "/notes/linux/": linux,
 
   "/notes/": notes,
