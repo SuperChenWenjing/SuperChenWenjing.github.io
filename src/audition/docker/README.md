@@ -1,6 +1,6 @@
 ---
 title: Docker
-icon: Docker2
+icon: docker
 # date: 2019-12-26
 category: 面试题
 tag: 面试题

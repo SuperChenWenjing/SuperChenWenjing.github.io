@@ -1,6 +1,6 @@
 ---
 title: SpringMVC
-icon: SPRINGMVC
+icon: spring-mvc
 # date: 2019-12-26
 category: 面试题
 tag: 面试题

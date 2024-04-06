@@ -20,13 +20,13 @@ const audition = arraySidebar([
   },
   {
     text: "数据库",
-    icon: "database-",
+    icon: "database",
     collapsible: false,
     children: ["redis/", "mysql/", "mongodb/"]
   },
   {
     text: "搜索引擎",
-    icon: "SEARCH",
+    icon: "search",
     collapsible: false,
     children: ["elasticsearch/"]
   },
@@ -44,7 +44,7 @@ const audition = arraySidebar([
   },
   {
     text: "移动开发",
-    icon: "a-AppStore",
+    icon: "AppStore",
     collapsible: false,
     children: ["ios/", "android/", "harmonyos/"]
   },

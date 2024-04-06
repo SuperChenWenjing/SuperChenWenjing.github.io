@@ -1,6 +1,6 @@
 ---
 title: SpringMVC
-icon: SPRINGMVC
+icon: spring-mvc
 # date: 2019-12-26
 category: SpringMVC
 timeline: true

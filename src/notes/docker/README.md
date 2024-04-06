@@ -1,6 +1,6 @@
 ---
 title: Docker
-icon: Docker2
+icon: docker
 # date: 2019-12-26
 category: 容器技术
 tag:
