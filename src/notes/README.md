@@ -55,11 +55,11 @@ sticky: 5
 ### 后端框架
 
 - [Spring](/notes/spring/README.md)
-- [SpringMVC](/notes/spring-mvc/README.md)
-- [SpringBoot](/notes/spring-boot/README.md)
-- [SpringCloud](/notes/spring-cloud/README.md)
+- [SpringMVC](/notes/spring/spring-mvc/README.md)
+- [SpringBoot](/notes/spring/spring-boot/README.md)
+- [SpringCloud](/notes/spring/spring-cloud/README.md)
 - [MyBatis](/notes/my-batis/README.md)
-- [MyBatisPlus](/notes/my-batis-plus/README.md)
+- [MyBatisPlus](/notes/my-batis/my-batis-plus/README.md)
 - [Flask](/notes/flask/README.md)
 - [Django](/notes/django/README.md)
 
