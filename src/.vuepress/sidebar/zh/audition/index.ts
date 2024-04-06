@@ -6,7 +6,7 @@ import { elasticsearch } from './search/index.js';
 import { vue, react, wechat, uniapp } from './website/index.js';
 import { ios, android, harmonyos } from './mobile/index.js';
 import { vite, webpack } from './package/index.js';
-import { spring, springmvc, springboot, springcloud, mybatis, mybatisplus, flask, django } from './frameworks/index.js';
+import { spring, springmvc, springboot, springcloud, mybatis, flask, django } from './frameworks/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
 
@@ -52,7 +52,7 @@ const audition = arraySidebar([
     text: "后端框架",
     icon: "api",
     collapsible: false,
-    children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"]
+    children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "flask/", "django/"]
   },
   {
     text: "后端运维",
@@ -85,7 +85,6 @@ export const auditionSidebar = {
   "/audition/spring-boot/": springboot,
   "/audition/spring-cloud/": springcloud,
   "/audition/my-batis/": mybatis,
-  "/audition/my-batis-plus/": mybatisplus,
   "/audition/flask/": flask,
   "/audition/django/": django,
   "/audition/linux/": linux,

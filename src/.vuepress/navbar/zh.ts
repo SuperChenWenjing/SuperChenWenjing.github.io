@@ -61,7 +61,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "后端框架",
-        children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"],
+        children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "flask/", "django/"],
       },
       {
         text: "后端运维",
@@ -106,7 +106,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "后端框架",
-        children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "my-batis-plus/", "flask/", "django/"],
+        children: ["spring/", "spring-mvc/", "spring-boot/", "spring-cloud/", "my-batis/", "flask/", "django/"],
       },
       {
         text: "后端运维",
