@@ -14,3 +14,7 @@ star: true
 :::
 
 <!-- more -->
+
+### 基础知识
+
+- [语言概述](/notes/java/core/overview.md)
