@@ -44,7 +44,7 @@ const audition = arraySidebar([
   },
   {
     text: "移动开发",
-    icon: "mobile",
+    icon: "a-AppStore",
     collapsible: false,
     children: ["ios/", "android/", "harmonyos/"]
   },

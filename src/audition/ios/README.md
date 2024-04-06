@@ -1,6 +1,6 @@
 ---
 title: IOS
-icon: IOS
+icon: ios
 # date: 2019-12-26
 category:
   - IOS

@@ -1,6 +1,6 @@
 ---
 title: HarmonyOS
-icon: HarmonyOS
+icon: harmonyos
 # date: 2019-11-15
 category:
   - HarmonyOS

@@ -20,8 +20,8 @@ export default hopeTheme({
   // 图标库：https://www.iconfont.cn
   iconAssets: [
     "//at.alicdn.com/t/c/font_3538491_of8auydfb4f.css", // 图标01
-    "//at.alicdn.com/t/c/font_4451850_mrbcn3myxyd.css", // 图标02
-    "//at.alicdn.com/t/c/font_4495756_agzcqua6lhj.css", // 图标03
+    "//at.alicdn.com/t/c/font_4451850_gknu44rgnwo.css", // 图标02
+    "//at.alicdn.com/t/c/font_4495756_bx70dy710e.css", // 图标03
   ],
 
   logo: "/logo.svg", // 导航栏图标

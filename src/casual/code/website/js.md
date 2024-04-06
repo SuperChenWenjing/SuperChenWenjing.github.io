@@ -1,5 +1,5 @@
 ---
-icon: javascript
+icon: JavaScript
 title: JavaScript 教程
 date: 2019-09-01
 category: JavaScript
