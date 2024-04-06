@@ -2,7 +2,9 @@
 title: SpringMVC
 icon: spring-mvc
 # date: 2019-12-26
-category: SpringMVC
+category:
+  - Spring
+  - SpringMVC
 timeline: true
 star: true
 ---

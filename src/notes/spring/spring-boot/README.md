@@ -2,7 +2,9 @@
 title: SpringBoot
 icon: springboot
 # date: 2019-12-26
-category: Spring
+category:
+  - Spring
+  - SpringBoot
 timeline: true
 star: true
 ---

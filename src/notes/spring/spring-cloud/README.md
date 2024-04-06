@@ -2,7 +2,9 @@
 title: SpringCloud
 icon: spring-cloud
 # date: 2019-12-26
-category: Spring
+category:
+  - Spring
+  - SpringCloud
 timeline: true
 star: true
 ---
