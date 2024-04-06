@@ -38,7 +38,8 @@ sticky: 4
 
 ### 前端框架
 
-- [Vue.js](/audition/vue/README.md)
+- [Vue.ja](/audition/vue/README.md)
+- [React.js](/audition/react/README.md)
 - [微信小程序](/audition/wechat/README.md)
 - [uni-app](/audition/uni-app/README.md)
 

@@ -37,6 +37,7 @@ sticky: 5
 ### 前端框架
 
 - [Vue.js](/notes/vue/README.md)
+- [React.js](/notes/react/README.md)
 - [微信小程序](/notes/wechat/README.md)
 - [uni-app](/notes/uni-app/README.md)
 
