@@ -9,6 +9,10 @@ export const java = arraySidebar([
     prefix: "core/",
     children: [
       "overview",
+      "variable",
+      "workflows",
+      "array",
+      "oop"
     ]
   }
 ]);
