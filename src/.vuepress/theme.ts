@@ -19,7 +19,7 @@ export default hopeTheme({
 
   // 图标库：https://www.iconfont.cn
   iconAssets: [
-    "//at.alicdn.com/t/c/font_3538491_mdhaskwzfyq.css",
+    "//at.alicdn.com/t/c/font_3538491_6mfmyal0vmo.css",
     "//at.alicdn.com/t/c/font_4451850_pahoxp0kjie.css", // 拓展图标
   ],
 

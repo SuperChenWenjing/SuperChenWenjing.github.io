@@ -37,7 +37,7 @@ const audition = arraySidebar([
   },
   {
     text: "打包工具",
-    icon: "package",
+    icon: "SERVICESPACKAGES",
     collapsible: false,
     children: ["vite/", "webpack/"]
   },
