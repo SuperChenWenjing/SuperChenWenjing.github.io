@@ -1,6 +1,6 @@
 ---
 title: Webpack
-icon: webpack1
+icon: webpack
 # date: 2019-11-15
 category:
   - Webpack
