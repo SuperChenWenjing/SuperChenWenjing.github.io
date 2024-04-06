@@ -5,6 +5,7 @@ import { mysql, redis, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { spring, springmvc, springboot, springcloud, mybatis, mybatisplus, flask, django } from './frameworks/index.js';
 import { vue, wechat } from './website/index.js';
+import { vite, webpack } from './package/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
 
@@ -33,6 +34,12 @@ const notes = arraySidebar([
     icon: "HTML",
     collapsible: false,
     children: ["vue/", "wechat/"]
+  },
+  {
+    text: "打包工具",
+    icon: "package",
+    collapsible: false,
+    children: ["vite/", "webpack/"]
   },
   {
     text: "后端框架",
@@ -69,6 +76,8 @@ export const notesSidebar = {
   "/notes/django/": django,
   "/notes/vue/": vue,
   "/notes/wechat/": wechat,
+  "/notes/vite/": vite,
+  "/notes/webpack/": webpack,
   "/notes/linux/": linux,
 
   "/notes/": notes,

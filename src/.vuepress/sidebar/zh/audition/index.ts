@@ -4,6 +4,7 @@ import { java, python, javascript, typescript } from './language/index.js';
 import { redis, mysql, mongodb } from './database/index.js';
 import { elasticsearch } from './search/index.js';
 import { vue, wechat } from './website/index.js';
+import { vite, webpack } from './package/index.js';
 import { spring, springmvc, springboot, springcloud, mybatis, mybatisplus, flask, django } from './frameworks/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
@@ -35,6 +36,12 @@ const audition = arraySidebar([
     children: ["vue/", "wechat/"]
   },
   {
+    text: "打包工具",
+    icon: "package",
+    collapsible: false,
+    children: ["vite/", "webpack/"]
+  },
+  {
     text: "后端框架",
     icon: "api",
     collapsible: false,
@@ -59,6 +66,8 @@ export const auditionSidebar = {
   "/audition/elasticsearch/": elasticsearch,
   "/audition/vue/": vue,
   "/audition/wechat/": wechat,
+  "/audition/vite/": vite,
+  "/audition/webpack/": webpack,
   "/audition/spring/": spring,
   "/audition/spring-mvc/": springmvc,
   "/audition/spring-boot/": springboot,

@@ -41,6 +41,11 @@ sticky: 4
 - [Vue.js](/audition/vue/README.md)
 - [微信小程序](/audition/wechat/README.md)
 
+### 打包工具
+
+- [Vite](/audition/vite/README.md)
+- [Webpack](/audition/webpack/README.md)
+
 ### 后端框架
 
 - [Spring](/audition/spring/README.md)
