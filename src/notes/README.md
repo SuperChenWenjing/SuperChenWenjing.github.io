@@ -38,6 +38,7 @@ sticky: 5
 
 - [Vue.js](/notes/vue/README.md)
 - [微信小程序](/notes/wechat/README.md)
+- [uni-app](/notes/uni-app/README.md)
 
 ### 打包工具
 

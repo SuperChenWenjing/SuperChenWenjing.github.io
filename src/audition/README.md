@@ -40,6 +40,7 @@ sticky: 4
 
 - [Vue.js](/audition/vue/README.md)
 - [微信小程序](/audition/wechat/README.md)
+- [uni-app](/audition/uni-app/README.md)
 
 ### 打包工具
 
