@@ -21,4 +21,3 @@ star: true
 - [变量与运算符](/notes/java/core/variable.md)
 - [流程控制语句](/notes/java/core/workflows.md)
 - [数组](/notes/java/core/array.md)
-- [面向对象](/notes/java/core/oop.md)

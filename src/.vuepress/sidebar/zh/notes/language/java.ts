@@ -11,8 +11,18 @@ export const java = arraySidebar([
       "overview",
       "variable",
       "workflows",
-      "array",
-      "oop"
+      "array"
+    ]
+  },
+  {
+    text: "面向对象",
+    icon: "Code",
+    link: "oop/",
+    prefix: "oop/",
+    children: [
+      "base",
+      "advanced",
+      "highlevel",
     ]
   }
 ]);
