@@ -24,5 +24,6 @@ export const java = arraySidebar([
       "advanced",
       "highlevel",
     ]
-  }
+  },
+  "exception/"
 ]);
