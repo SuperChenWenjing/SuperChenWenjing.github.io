@@ -6,3 +6,7 @@ category: Java
 timeline: true
 star: true
 ---
+
+## 异常体系
+
+![Java异常体系](../assets/Java异常体系.png)
