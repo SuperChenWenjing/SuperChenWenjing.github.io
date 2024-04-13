@@ -1,6 +1,6 @@
 ---
 title: 基础知识
-icon: Rrl_s_075
+icon: Code
 # date: 2019-12-26
 category: MySQL
 timeline: true

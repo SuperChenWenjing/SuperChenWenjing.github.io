@@ -19,4 +19,5 @@ star: true
 
 ### MySQL
 
+- [JDBC](/notes/mysql/jdbc/README.md)
 - [基础知识](/notes/mysql/core/README.md)
