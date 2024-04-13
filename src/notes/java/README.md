@@ -19,8 +19,8 @@ star: true
 
 ### Java
 
-- [基础知识](/notes/java/core/README.md)
-  - [语言概述](/notes/java/core/overview.md)
-  - [变量与运算符](/notes/java/core/variable.md)
-  - [流程控制语句](/notes/java/core/workflows.md)
-  - [数组](/notes/java/core/array.md)
+- [基础知识](/notes/java/base/README.md)
+- [面向对象](/notes/java/oop/README.md)
+- [集合](/notes/java/exception/README.md)
+- [异常处理](/notes/java/exception/README.md)
+- [多线程](/notes/java/thread/README.md)
