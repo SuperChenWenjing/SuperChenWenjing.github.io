@@ -257,4 +257,60 @@ Data Definition Language，数据定义语言，用来定义数据库对象(数�
 
 1. 创建一个 demo 数据库, 使用数据库默认的字符集。
 
+## 扩展知识
+
+### 数据库连接池
+
+SpringBoot3.x 版本配置如下：
+
+```xml
+<dependency>
+   <groupId>com.alibaba</groupId>
+   <artifactId>druid-spring-boot-3-starter</artifactId>
+   <version>1.2.20</version>
+</dependency>
+```
+
+在 `application.yaml` 添加以下内容：
+
+```yaml
+spring:
+  datasource:
+    # 连接池类型 
+    type: com.alibaba.druid.pool.DruidDataSource
+ 
+    # Druid的其他属性配置 springboot3整合情况下,数据库连接信息必须在Druid属性下!
+    druid:
+      url: jdbc:mysql://localhost:3306/day01
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 初始化时建立物理连接的个数
+      initial-size: 5
+      # 连接池的最小空闲数量
+      min-idle: 5
+      # 连接池最大连接数量
+      max-active: 20
+      # 获取连接时最大等待时间，单位毫秒
+      max-wait: 60000
+      # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      test-while-idle: true
+      # 既作为检测的间隔时间又作为testWhileIdel执行的依据
+      time-between-eviction-runs-millis: 60000
+      # 销毁线程时检测当前连接的最后活动时间和当前时间差大于该值时，关闭当前连接(配置连接在池中的最小生存时间)
+      min-evictable-idle-time-millis: 30000
+      # 用来检测数据库连接是否有效的sql 必须是一个查询语句(oracle中为 select 1 from dual)
+      validation-query: select 1
+      # 申请连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
+      test-on-borrow: false
+      # 归还连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
+      test-on-return: false
+      # 是否缓存preparedStatement, 也就是PSCache,PSCache对支持游标的数据库性能提升巨大，比如说oracle,在mysql下建议关闭。
+      pool-prepared-statements: false
+      # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100
+      max-pool-prepared-statement-per-connection-size: -1
+      # 合并多个DruidDataSource的监控数据
+      use-global-data-source-stat: true
+```
+
 <strong style="color: #fb9b5f">未完待续...</strong>
