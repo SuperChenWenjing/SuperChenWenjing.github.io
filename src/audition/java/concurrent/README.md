@@ -189,99 +189,83 @@ star: true
 
 ## Hashtable vs ConcurrentHashMap
 
-::: tip Hashtable vs ConcurrentHashMap 的区别。
+::: tip 掌握 Hashtable 与 ConcurrentHashMap 的区别 & 掌握 ConcurrentHashMap 在不同版本的实现区别。
 
-**要求**
+**Hashtable 对比 ConcurrentHashMap**：
 
-* 掌握 Hashtable 与 ConcurrentHashMap 的区别
-* 掌握 ConcurrentHashMap 在不同版本的实现区别
+* Hashtable 与 ConcurrentHashMap 都是线程安全的 Map 集合。
+* Hashtable 并发度低，整个 Hashtable 对应一把锁，同一时刻，只能有一个线程操作它。
+* ConcurrentHashMap 并发度高，整个 ConcurrentHashMap 对应多把锁，只要线程访问的是不同锁，那么不会冲突。
 
-> 更形象的演示，见资料中的 hash-demo.jar，运行需要 jdk14 以上环境，进入 jar 包目录，执行下面命令
->
-> ```
-> java -jar --add-exports java.base/jdk.internal.misc=ALL-UNNAMED hash-demo.jar
-> ```
+**ConcurrentHashMap 1.7**：
 
-**Hashtable 对比 ConcurrentHashMap**
-
-* Hashtable 与 ConcurrentHashMap 都是线程安全的 Map 集合
-* Hashtable 并发度低，整个 Hashtable 对应一把锁，同一时刻，只能有一个线程操作它
-* ConcurrentHashMap 并发度高，整个 ConcurrentHashMap 对应多把锁，只要线程访问的是不同锁，那么不会冲突
-
-**ConcurrentHashMap 1.7**
-
-* 数据结构：`Segment(大数组) + HashEntry(小数组) + 链表`，每个 Segment 对应一把锁，如果多个线程访问不同的 Segment，则不会冲突
-* 并发度：Segment 数组大小即并发度，决定了同一时刻最多能有多少个线程并发访问。Segment 数组不能扩容，意味着并发度在 ConcurrentHashMap 创建时就固定了
+* 数据结构：`Segment(大数组) + HashEntry(小数组) + 链表`，每个 Segment 对应一把锁，如果多个线程访问不同的 Segment，则不会冲突。
+* 并发度：Segment 数组大小即并发度，决定了同一时刻最多能有多少个线程并发访问。Segment 数组不能扩容，意味着并发度在 ConcurrentHashMap 创建时就固定了。
 * 索引计算
-  * 假设大数组长度是 $2^m$，key 在大数组内的索引是 key 的二次 hash 值的高 m 位
-  * 假设小数组长度是 $2^n$，key 在小数组内的索引是 key 的二次 hash 值的低 n 位
-* 扩容：每个小数组的扩容相对独立，小数组在超过扩容因子时会触发扩容，每次扩容翻倍
-* Segment[0] 原型：首次创建其它小数组时，会以此原型为依据，数组长度，扩容因子都会以原型为准
+  * 假设大数组长度是 $2^m$，key 在大数组内的索引是 key 的二次 hash 值的高 m 位。
+  * 假设小数组长度是 $2^n$，key 在小数组内的索引是 key 的二次 hash 值的低 n 位。
+* 扩容：每个小数组的扩容相对独立，小数组在超过扩容因子时会触发扩容，每次扩容翻倍。
+* Segment[0] 原型：首次创建其它小数组时，会以此原型为依据，数组长度，扩容因子都会以原型为准。
 
-**ConcurrentHashMap 1.8**
+**ConcurrentHashMap 1.8**：
 
-* 数据结构：`Node 数组 + 链表或红黑树`，数组的每个头节点作为锁，如果多个线程访问的头节点不同，则不会冲突。首次生成头节点时如果发生竞争，利用 cas 而非 syncronized，进一步提升性能
-* 并发度：Node 数组有多大，并发度就有多大，与 1.7 不同，Node 数组可以扩容
-* 扩容条件：Node 数组满 3/4 时就会扩容
-* 扩容单位：以链表为单位从后向前迁移链表，迁移完成的将旧数组头节点替换为 ForwardingNode
-* 扩容时并发 get
-  * 根据是否为 ForwardingNode 来决定是在新数组查找还是在旧数组查找，不会阻塞
-  * 如果链表长度超过 1，则需要对节点进行复制（创建新节点），怕的是节点迁移后 next 指针改变
-  * 如果链表最后几个元素扩容后索引不变，则节点无需复制
-* 扩容时并发 put
-  * 如果 put 的线程与扩容线程操作的链表是同一个，put 线程会阻塞
-  * 如果 put 的线程操作的链表还未迁移完成，即头节点不是 ForwardingNode，则可以并发执行
-  * 如果 put 的线程操作的链表已经迁移完成，即头结点是 ForwardingNode，则可以协助扩容
-* 与 1.7 相比是懒惰初始化
-* capacity 代表预估的元素个数，capacity / factory 来计算出初始数组大小，需要贴近 $2^n$
-* loadFactor 只在计算初始数组大小时被使用，之后扩容固定为 3/4
-* 超过树化阈值时的扩容问题，如果容量已经是 64，直接树化，否则在原来容量基础上做 3 轮扩容
+* 数据结构：`Node 数组 + 链表或红黑树`，数组的每个头节点作为锁，如果多个线程访问的头节点不同，则不会冲突。首次生成头节点时如果发生竞争，利用 cas 而非 syncronized，进一步提升性能。
+* 并发度：Node 数组有多大，并发度就有多大，与 1.7 不同，Node 数组可以扩容。
+* 扩容条件：Node 数组满 3/4 时就会扩容。
+* 扩容单位：以链表为单位从后向前迁移链表，迁移完成的将旧数组头节点替换为 ForwardingNode。
+* 扩容时并发 get：
+  * 根据是否为 ForwardingNode 来决定是在新数组查找还是在旧数组查找，不会阻塞。
+  * 如果链表长度超过 1，则需要对节点进行复制（创建新节点），怕的是节点迁移后 next 指针改变。
+  * 如果链表最后几个元素扩容后索引不变，则节点无需复制。
+* 扩容时并发 put：
+  * 如果 put 的线程与扩容线程操作的链表是同一个，put 线程会阻塞。
+  * 如果 put 的线程操作的链表还未迁移完成，即头节点不是 ForwardingNode，则可以并发执行。
+  * 如果 put 的线程操作的链表已经迁移完成，即头结点是 ForwardingNode，则可以协助扩容。
+* 与 1.7 相比是懒惰初始化。
+* capacity 代表预估的元素个数，capacity / factory 来计算出初始数组大小，需要贴近 $2^n$。
+* loadFactor 只在计算初始数组大小时被使用，之后扩容固定为 3/4。
+* 超过树化阈值时的扩容问题，如果容量已经是 64，直接树化，否则在原来容量基础上做 3 轮扩容。
 
 :::
 
 ## ThreadLocal
 
-::: tip 掌握 ThreadLocal 的作用与原理。
+::: tip 掌握 ThreadLocal 的作用与原理 & 掌握 ThreadLocal 的内存释放时机。
 
-**要求**
+**作用**：
 
-* 掌握 ThreadLocal 的作用与原理
-* 掌握 ThreadLocal 的内存释放时机
+* `ThreadLocal` 可以实现【资源对象】的线程隔离，让每个线程各用各的【资源对象】，避免争用引发的线程安全问题。
+* `ThreadLocal` 同时实现了线程内的资源共享。
 
-**作用**
+**原理**：
 
-* ThreadLocal 可以实现【资源对象】的线程隔离，让每个线程各用各的【资源对象】，避免争用引发的线程安全问题
-* ThreadLocal 同时实现了线程内的资源共享
+每个线程内有一个 `ThreadLocalMap` 类型的成员变量，用来存储资源对象。
 
-**原理**
+* 调用 `set` 方法：就是以 `ThreadLocal` 自己作为 `key`，资源对象作为 `value`，放入当前线程的 `ThreadLocalMap` 集合中。
+* 调用 `get` 方法：就是以 `ThreadLocal` 自己作为 `key`，到当前线程中查找关联的资源值。
+* 调用 `remove` 方法：就是以 `ThreadLocal` 自己作为 `key`，移除当前线程关联的资源值。
 
-每个线程内有一个 ThreadLocalMap 类型的成员变量，用来存储资源对象
+`ThreadLocalMap` 的一些特点：
 
-* 调用 set 方法，就是以 ThreadLocal 自己作为 key，资源对象作为 value，放入当前线程的 ThreadLocalMap 集合中
-* 调用 get 方法，就是以 ThreadLocal 自己作为 key，到当前线程中查找关联的资源值
-* 调用 remove 方法，就是以 ThreadLocal 自己作为 key，移除当前线程关联的资源值
+* `key` 的 `hash` 值统一分配。
+* 初始容量 `16`，扩容因子 `2/3`，扩容容量翻倍。
+* `key` 索引冲突后用开放寻址法解决冲突。
 
-ThreadLocalMap 的一些特点
+**弱引用 Key**：
 
-* key 的 hash 值统一分配
-* 初始容量 16，扩容因子 2/3，扩容容量翻倍
-* key 索引冲突后用开放寻址法解决冲突
+`ThreadLocalMap` 中的 `key` 被设计为弱引用，原因如下：
 
-**弱引用 key**
+* `Thread` 线程可能需要长时间运行（如线程池中的线程），如果 `key` 不再使用了，则需要在内存不足（`GC`）时释放其占用的内存。
 
-ThreadLocalMap 中的 key 被设计为弱引用，原因如下
+**内存释放时机**：
 
-* Thread 可能需要长时间运行（如线程池中的线程），如果 key 不再使用，需要在内存不足（GC）时释放其占用的内存
-
-**内存释放时机**
-
-* 被动 GC 释放 key
-  * 仅是让 key 的内存释放，关联 value 的内存并不会释放
-* 懒惰被动释放 value
-  * get key 时，发现是 null key，则释放其 value 内存
-  * set key 时，会使用启发式扫描，清除临近的 null key 的 value 内存，启发次数与元素个数，是否发现 null key 有关
-* 主动 remove 释放 key，value
-  * 会同时释放 key，value 的内存，也会清除临近的 null key 的 value 内存
-  * 推荐使用它，因为一般使用 ThreadLocal 时都把它作为静态变量（即强引用），因此无法被动依靠 GC 回收
+* 被动 `GC` 释放 `key`：
+  * 仅是让 `key` 的内存释放（弱引用），关联 `value` 的内存并不会释放（强引用）。
+* 懒惰被动释放 `value`：
+  * `get key` 时：发现是 `null key`，则释放其 `value` 内存。
+  * `set key` 时：会使用启发式扫描，清除临近的 `null key` 的 `value` 内存，启发次数与元素个数，是否发现 `null key` 有关。
+* 主动 `remove` 方法释放 `key、value`：
+  * 会同时释放 `key、value` 的内存，也会清除临近的 `null key` 的 `value` 内存。
+  * 推荐使用它，因为一般使用 `ThreadLocal` 时都把它作为静态变量（即强引用），因此无法被动依靠 `GC` 回收。
 
 :::
