@@ -1,6 +1,6 @@
 ---
 title: 集群篇
-icon: yuanchenglianjie
+icon: Code
 # date: 2019-12-26
 category: 面试题
 tag: 面试题
@@ -190,7 +190,7 @@ get num
 - `offset`：偏移量，随着记录在 `repl_baklog` 中的数据增多而逐渐增大，`slave` 完成同步时也会记录当前同步的`offset`。
   - 如果 `slave` 的 `offset` 小于 `master` 的 `offset`，则说明 `slave` 的数据落后于 `master`，需要更新。
 
-因此 `slave` 做数据同步，必须向 `master` 声明自己的 `replication id ` 和 `offset`，`master` 才可以判断到底需要同步哪些数据。
+因此 `slave` 做数据同步，必须向 `master` 声明自己的 `replication id` 和 `offset`，`master` 才可以判断到底需要同步哪些数据。
 
 由于我们在执行 `slaveof` 命令之前，所有 Redis 节点都是 `master`，都有自己的 `replid` 和 `offset`。
 
@@ -198,7 +198,7 @@ get num
 
 所以 `master` 判断发现 `slave` 发送来的 `replid` 与自己的不一致，则说明这是一个全新的 `slave`，就知道要做全量同步了。
 
-`master` 会将自己的 `replid` 和 `offset` 都发送给这个 `slave`，`slave` 保存这些信息到本地，自此以后 `slave` 的 `replid ` 就与 `master` 一致了。
+`master` 会将自己的 `replid` 和 `offset` 都发送给这个 `slave`，`slave` 保存这些信息到本地，自此以后 `slave` 的 `replid` 就与 `master` 一致了。
 
 因此，<strong style="color: #fb9b5f">`master` 判断一个节点是否是第一次同步的依据，就是要看 `replid` 是否一致</strong>（最新的流程如下图所示）。
 
@@ -210,7 +210,7 @@ get num
 - `master` 节点判断 `replid`，发现不一致，拒绝增量同步。
 - `master` 将完整内存数据生成 `RDB`，发送 `RDB` 到 `slave`。
 - `slave` 清空本地数据，加载 `master` 的 `RDB`。
-- `master `将 `RDB` 期间的命令记录在 `repl_baklog`，并持续将log中的命令发送给 `slave`。
+- `master`将 `RDB` 期间的命令记录在 `repl_baklog`，并持续将log中的命令发送给 `slave`。
 - `slave` 执行接收到的命令，保持与 `master` 之间的同步。
 
 来看下 `r1` 节点的运行日志：
