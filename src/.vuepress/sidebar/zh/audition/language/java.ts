@@ -3,9 +3,11 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const java = arraySidebar([
   "",
   "core/",
+  "io/",
   "collection/",
   "concurrent/",
-  "io/",
+  "design-mode/",
+  "algorithms/",
   "jvm/",
   {
     text: "新特性",
