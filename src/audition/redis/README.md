@@ -96,7 +96,7 @@ star: true
 
 > 利用 `hash` 结构记录线程 `id` 和重入次数。
 >
-> <img src="./assets/image-20240503235607166.png" alt="image-20240503235607166" style="zoom:50%;" />
+> <img src="./assets/Redisson 实现的分布式锁可重入原理.png" alt="image-20240503235607166" style="zoom:50%;" />
 
 :::
 
