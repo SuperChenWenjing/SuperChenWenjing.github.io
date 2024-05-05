@@ -7,6 +7,7 @@ import { vue, react, wechat, uniapp } from './website/index.js';
 import { ios, android, harmonyos } from './mobile/index.js';
 import { vite, webpack } from './package/index.js';
 import { spring, mybatis, flask, django } from './frameworks/index.js';
+import { rabbitmq } from './mq/index.js';
 import { linux } from './linux/index.js';
 import { docker, kubernetes } from './container/index.js';
 
@@ -55,6 +56,12 @@ const audition = arraySidebar([
     children: ["spring/", "my-batis/", "flask/", "django/"]
   },
   {
+    text: "消息队列",
+    icon: "message",
+    collapsible: false,
+    children: ["rabbitmq/"]
+  },
+  {
     text: "后端运维",
     icon: "programmer-smile-code-program",
     collapsible: false,
@@ -83,6 +90,7 @@ export const auditionSidebar = {
   "/audition/spring/": spring,
   "/audition/my-batis/": mybatis,
   "/audition/flask/": flask,
+  "/audition/rabbitmq/": rabbitmq,
   "/audition/django/": django,
   "/audition/linux/": linux,
   "/audition/docker/": docker,

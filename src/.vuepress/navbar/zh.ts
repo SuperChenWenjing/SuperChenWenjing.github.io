@@ -64,6 +64,10 @@ export const zhNavbar = navbar([
         children: ["spring/", "my-batis/", "flask/", "django/"],
       },
       {
+        text: "消息队列",
+        children: ["rabbitmq/"],
+      },
+      {
         text: "后端运维",
         children: ["linux/", "docker/", "kubernetes/"],
       },
@@ -107,6 +111,10 @@ export const zhNavbar = navbar([
       {
         text: "后端框架",
         children: ["spring/", "my-batis/", "flask/", "django/"],
+      },
+      {
+        text: "消息队列",
+        children: ["rabbitmq/"],
       },
       {
         text: "后端运维",
